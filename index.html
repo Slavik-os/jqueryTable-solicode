@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link re="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet"  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navHome" class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid max-width-940">
+            <button class="navbar-toggler togglerNoBorder" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse backgroundWhite" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">JSON</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DOCUMENTATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown-menu dropdown-menu-right navDropdown" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="works-on-display.html">Works on Display</a>
+                            <a class="dropdown-item" href="poetry.html">Poetry</a>
+                            <a class="dropdown-item" href="commissions.html">Commissions</a>
+                            <a class="dropdown-item" href="blog.html">Blog</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-xxl" style='text-align: center;padding :5%; color : #000;'>
+        <h1 style="font-size:3vw">Shopme Stock manager</h1>
+    </div>
+<div class="container bar-row">
+    <input type="text" id="myInput" class="seach_bar" placeholder="Search for item">
+</div>
+<div class="table-responsive">  
+  <table class="table">
+    <thead class="table-header">
+        <th class="header__item"><a id="ID" class="filter__link filter__link--number" href="#"># ID</a></th>
+        <th class="header__item"><a id="Brand" class="filter__link" href="#">Brand Name</a></th>
+        <th class="header__item"><a id="Thumnail" class="filter__link" href="#">Thumnail</a></th>
+        <th class="header__item"><a id="Description" class="filter__link " href="#">Description</a></th>
+        <th class="header__item"><a id="Price" class="filter__link" href="#">Price</a></th>
+        <th class="header__item"><a id="Categorie" class="filter__link" href="#">Categorie</a></th>
+        <th class="header__item"><a id="Stock_status" class="filter__link" href="#">Stock Status</a></th>
+        <th class="header__item"><a id="Supplier" class="filter__link" href="#">Supplier</a></th>
+        <th class="header__item"><a id="Supply_Date" class="filter__link " href="#">Supply Date</a></th>
+    </thead>
+    <tbody id="myTable" class="table-content">
+    </tbody>
+  </table>
+</div>
+  <input type="hidden" id="name_order" value="asc">
+  <input type="hidden" id="age_order" value="asc">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js.js"></script>
+<script>
+    var properties = [
+        'ID',
+        'Brand',
+        'Thumnail',
+        'Description',
+        'Price',
+        'Categorie',
+        'Stock_status',
+        'Supplier',
+        'Supply_Date'
+    ];
+    
+    $.each( properties, function( i, val ) {
+        var orderClass = '';
+    
+        $("#" + val).click(function(e){
+            e.preventDefault();
+            $('.filter__link.filter__link--active').not(this).removeClass('filter__link--active');
+              $(this).toggleClass('filter__link--active');
+               $('.filter__link').removeClass('asc desc');
+    
+               if(orderClass == 'desc' || orderClass == '') {
+                    $(this).addClass('asc');
+                    orderClass = 'asc';
+               } else {
+                   $(this).addClass('desc');
+                   orderClass = 'desc';
+               }
+    
+            var parent = $(this).closest('.header__item');
+                var index = $(".header__item").index(parent);
+            var $table = $('.table-content');
+            var rows = $table.find('.table-row').get();
+            var isSelected = $(this).hasClass('filter__link--active');
+            var isNumber = $(this).hasClass('filter__link--number');
+                
+            rows.sort(function(a, b){
+    
+                var x = $(a).find('.table-data').eq(index).text();
+                    var y = $(b).find('.table-data').eq(index).text();
+                    
+                if(isNumber == true) {
+                            
+                    if(isSelected) {
+                        return x - y;
+                    } else {
+                        return y - x;
+                    }
+    
+                } else {
+                
+                    if(isSelected) {		
+                        if(x < y) return -1;
+                        if(x > y) return 1;
+                        return 0;
+                    } else {
+                        if(x > y) return -1;
+                        if(x < y) return 1;
+                        return 0;
+                    }
+                }
+                });
+    
+            $.each(rows, function(index,row) {
+                $table.append(row);
+            });
+    
+            return false;
+        });
+    
+    });
+    </script>
+</body>
+</html>

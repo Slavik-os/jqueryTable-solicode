@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.11.3/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="test.css">
+    <title>Document</title>
+</head>
+<body>
+	<p>Sort Table Rows by Clicking on the Table Headers - Ascending and Descending (jQuery)</p>
+	<table class="table">
+		<thead class="table-header">
+			<th class="header__item"><a id="ID" class="filter__link" href="#"># ID</a></th>
+			<th class="header__item"><a id="Brand" class="filter__link filter__link--number" href="#">Brand Name</a></th>
+			<th class="header__item"><a id="Thumnail" class="filter__link filter__link--number" href="#">Thumnail</a></th>
+			<th class="header__item"><a id="Description" class="filter__link filter__link--number" href="#">Description</a></th>
+			<th class="header__item"><a id="Price" class="filter__link filter__link--number" href="#">Price</a></th>
+			<th class="header__item"><a id="Categorie" class="filter__link filter__link--number" href="#">Categorie</a></th>
+			<th class="header__item"><a id="Stock_status" class="filter__link filter__link--number" href="#">Stock Status</a></th>
+			<th class="header__item"><a id="Supplier" class="filter__link filter__link--number" href="#">Supplier</a></th>
+			<th class="header__item"><a id="Supply_Date" class="filter__link filter__link--number" href="#">Supply Date</a></th>
+		</thead>
+		<tbody class="table-content">	
+			<tr class="table-row">		
+				<td class="table-data">Tom</td>
+				<td class="table-data">0</td>
+				<td class="table-data">10</td>
+				<td class="table-data">111</td>
+				<td class="table-data">-1</td>
+				<td class="table-data">10</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2013/12/01</td>
+			</tr>
+			<tr class="table-row">
+				<td class="table-data">Dick</td>
+				<td class="table-data">1</td>
+				<td class="table-data">1</td>
+				<td class="table-data">2</td>
+				<td class="table-data">3</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2015/10/01</td>
+			</tr>
+			<tr class="table-row">
+				<td class="table-data">Harry</td>
+				<td class="table-data">0</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2</td>
+				<td class="table-data">2012/11/01</td>
+			</tr>
+		</tbody>	
+	</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.11.3/datatables.min.js"></script>
+</script>
+<script>
+var properties = [
+	'ID',
+	'Brand',
+	'Thumnail',
+	'Description',
+	'Price',
+	'Categorie',
+	'Stock_status',
+	'Supplier',
+	'Supply_Date'
+];
+
+$.each( properties, function( i, val ) {
+	var orderClass = '';
+
+	$("#" + val).click(function(e){
+		e.preventDefault();
+		$('.filter__link.filter__link--active').not(this).removeClass('filter__link--active');
+  		$(this).toggleClass('filter__link--active');
+   		$('.filter__link').removeClass('asc desc');
+
+   		if(orderClass == 'desc' || orderClass == '') {
+    			$(this).addClass('asc');
+    			orderClass = 'asc';
+       	} else {
+       		$(this).addClass('desc');
+       		orderClass = 'desc';
+       	}
+
+		var parent = $(this).closest('.header__item');
+    		var index = $(".header__item").index(parent);
+		var $table = $('.table-content');
+		var rows = $table.find('.table-row').get();
+		var isSelected = $(this).hasClass('filter__link--active');
+		var isNumber = $(this).hasClass('filter__link--number');
+			
+		rows.sort(function(a, b){
+
+			var x = $(a).find('.table-data').eq(index).text();
+    			var y = $(b).find('.table-data').eq(index).text();
+				
+			if(isNumber == true) {
+    					
+				if(isSelected) {
+					return x - y;
+				} else {
+					return y - x;
+				}
+
+			} else {
+			
+				if(isSelected) {		
+					if(x < y) return -1;
+					if(x > y) return 1;
+					return 0;
+				} else {
+					if(x > y) return -1;
+					if(x < y) return 1;
+					return 0;
+				}
+			}
+    		});
+
+		$.each(rows, function(index,row) {
+			$table.append(row);
+		});
+
+		return false;
+	});
+
+});
+</script>
+</body>
+</html>

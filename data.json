@@ -1,0 +1,296 @@
+[
+{
+
+	 "id":0,
+	 "info":{
+ 	 "brand_name":"carhartt",
+	 "thumbnail":"assets/cakyPants.png",
+	 "price":"120,00$",
+	 "description":"Men Grey pants office",
+	 "categorie":"pants / men",
+	 "availibility":["Tangier","casablanca"],
+	 "supplier":["amazon store","2020/12/ 01"]
+     }	 
+}
+,
+{
+
+	"id":1,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/pantsBlackMan.png",
+	"description":"Men Embroidery Flap Pockets Cargo Jeans",
+	"price":"25,00$",
+	"categorie":"pants / men",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["Shein store","2020/12/01"]
+	}	 
+}
+,
+{
+
+	"id":2,
+	"info":{
+	"brand_name":"Palace",
+	"thumbnail":"assets/pocketJeans.png",
+	"description":"Men Slant Pocket Jeans",
+	"price":"22,00$",
+	"categorie":"pants / men",
+	"availibility":["Tangier"],
+	"supplier":["palace store","2020/10/12"]
+	}	 
+}
+,
+{
+
+	"id":5,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/DAZYTartanPocket.png",
+	"description":"DAZY Tartan Pocket Front Drop Shoulder Blouse",
+	"price":"14,00$",
+	"categorie":"jacket / women",
+	"availibility":["unvailable"],
+	"supplier":["Shein","2020/12/04"]
+	}	 
+}
+,
+{
+
+	"id":4,
+	"info":{
+	"brand_name":"Shein",
+	"thumbnail":"assets/DAZYTartanPocketYellow.png",
+	"description":"DAZY Tartan Pocket Front Drop Shoulder Blouse Yellow",
+	"price":"14,00$",
+	"categorie":"pants / women",
+	"availibility":["casablanca"],
+	"supplier":["amazon store","2020/09/13"]
+	}	 
+}
+,
+{
+
+	"id":3,
+	"info":{
+	 "brand_name":"nike",
+	"thumbnail":"assets/whiteTop.png",
+	"description":"MOTF PREMIUM 100% COTTON KNOT TANK TOP",
+	"price":"10,00$",
+	"categorie":"top / women",
+	"availibility":["Tangier","Fes"],
+	"supplier":["amazon store","2020/01/15"]
+	}	 
+}
+,
+{
+
+	"id":6,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/chinesShirt.png",
+	"description":"Chinese Dragon Graphic Oversized Longline Tee",
+	"price":"50,00$",
+	"categorie":"Tshirt / women",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["Shein store","2020/11/23"]
+	}	 
+}
+,
+{
+
+	"id":7,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/greenShirt.png",
+	"description":"Men Embroidery Flap Pockets Cargo Jeans",
+	"price":"09,99$",
+	"categorie":"tshirt / women",
+	"availibility":["Fes","casablanca"],
+	"supplier":["shien store","2021/01/05"]
+	}	 
+}
+,
+{
+
+	"id":8,
+	"info":{
+	 "brand_name":"KidBrand",
+	"thumbnail":"assets/SHEINBoys.png",
+	"description":"KidsBoys Colorblock Straight Leg Jeans",
+	"price":"19,00$",
+	"categorie":"pants / kids",
+	"availibility":["Meknes","Tangier"],
+	"supplier":["KidBrand store","2022/01/19"]
+	}	 
+}
+,
+{
+
+	"id":9,
+	"info":{
+	 "brand_name":"KidBrand",
+	"thumbnail":"assets/kidforfid.png",
+	"description":"Boys Ombre Drum & Letter Graphic Drop Shoulder Denim Top",
+	"price":"21,00$",
+	"categorie":"jacket / kids",
+	"availibility":["unavailable"],
+	"supplier":["KidBrand","2020/01/19"]
+	}	 
+}
+,
+{
+
+	"id":10,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/pantsBlackMan.png",
+	"description":"Men Embroidery Flap Pockets Cargo Jeans",
+	"price":"25,00$",
+	"categorie":"pants / men",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["amazon store","2020/12/01"]
+	}	 
+}
+,
+{
+
+	"id":12,
+	"info":{
+	 "brand_name":"Palace",
+	"thumbnail":"assets/slogan.png",
+	"description":"Men Slogan & Snake Pattern Drop Shoulder Sweater",
+	"price":"25,00$",
+	"categorie":"sweater / men",
+	"availibility":["Meknes","Fes"],
+	"supplier":["amazon store","2021/12/30"]
+	}	 
+}
+,
+{
+
+	"id":13,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/kinTop.png",
+	"description":"1pc Plaid Pattern Knit Top",
+	"price":"25,00$",
+	"categorie":"Top / men",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["Shien store","2021/12/21"]
+	}	 
+}
+,
+{
+
+	"id":14,
+	"info":{
+	 "brand_name":"Los angelos",
+	"thumbnail":"assets/hoodieMen.png",
+	"description":"Men Letter Graphic Kangaroo Pocket Drawstring Thermal Lined Hoodie",
+	"price":"30,00$",
+	"categorie":"Hoodie / men",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["Los angelos store","2022/01/18"]
+	}	 
+}
+,
+{
+
+	"id":15,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/overAll.png",
+	"description":"Extended Sizes Men Letter Graphic Hoodie & Cartoon Embroidery Denim Overal",
+	"price":"51,00$",
+	"categorie":"overall / men",
+	"availibility":["unvailable"],
+	"supplier":["Shein store","2021/02/28"]
+	}	 
+}
+,
+{
+
+	"id":15,
+	"info":{
+	 "brand_name":"Palace",
+	"thumbnail":"assets/blueOverAll.png",
+	"description":"Men Slogan Graphic Color Block Flap Pocket Jumpsuit Without Bag",
+	"price":"48,00$",
+	"categorie":"overall / men",
+	"availibility":["Tangier"],
+	"supplier":["Palce store","2020/12/01"]
+	}	 
+}
+,
+{
+
+	"id":16,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/menFlapLetter.png",
+	"description":"Men Letter Graphic Flap Pocket Jacket With Cargo Pants",
+	"price":"33,00$",
+	"categorie":"overall / men",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["shien store","2022/01/01"]
+	}	 
+}
+,
+{
+
+	"id":17,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/creamyoverAll.png",
+	"description":"SHEIN Men Contrast Sideseam Sweatshirt & Sweatpants Set",
+	"price":"34,00$",
+	"categorie":"overall / men",
+	"availibility":["unavailable"],
+	"supplier":["shein store","2021/12/21"]
+	}	 
+}
+,
+{
+
+	"id":18,
+	"info":{
+	 "brand_name":"Robby",
+	"thumbnail":"assets/womenSkyMask.png",
+	"description":"Solid Knit Balaclava",
+	"price":"3,00$",
+	"categorie":"mask / women",
+	"availibility":["Fes","casablanca"],
+	"supplier":["robby store","2020/11/30"]
+	}	 
+}
+,
+{
+
+	"id":19,
+	"info":{
+	 "brand_name":"Shein",
+	"thumbnail":"assets/pantsWomenL.png",
+	"description":"Ripped Cat Whisker Skinny Jeans",
+	"price":"25,00$",
+	"categorie":"pants / women",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["amazon store","2022/01/13"]
+	}	 
+}
+,
+{
+
+	"id":20,
+	"info":{
+	 "brand_name":"addidas",
+	"thumbnail":"assets/menShorts.png",
+	"description":"Men Letter Patched Detail Flap Pocket Drawstring Waist Shorts",
+	"price":"16,00$",
+	"categorie":"pants / men",
+	"availibility":["Tangier","casablanca"],
+	"supplier":["addidas store","2019/05/23"]
+	}	 
+}
+
+]
