@@ -42,53 +42,53 @@
   
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script>
-//         function sort_name(){
-//           let table = $('#myTable');
-//           let tbody = $('#table1');
-//           tbody.find('tr').sort((a,b)=>{
-//             if($('#name_order').val()=="asc"){
-//               return $('td:first',a).text().localeCompare($('td:first',b).text());
-//             }
-//             else {
-//               return $('td:first', b).text().localeCompare($('td:first', a).text());
+        function sort_name(){
+          let table = $('#myTable');
+          let tbody = $('#table1');
+          tbody.find('tr').sort((a,b)=>{
+            if($('#name_order').val()=="asc"){
+              return $('td:first',a).text().localeCompare($('td:first',b).text());
+            }
+            else {
+              return $('td:first', b).text().localeCompare($('td:first', a).text());
 
-//             }
-//           }).appendTo(tbody);
-//           sort_order = $('#name_order').val()
-//           if(sort_order=='asc'){
-//             document.getElementById('name_order').value = 'desc'
-//           }
-//           if (sort_order=='desc'){
-//             document.getElementById('name_order').value="asc";
-//           }
-//         }
-//         function sort_age() {
-//           var table=$('#mytable');
-//           var tbody =$('#table1');
+            }
+          }).appendTo(tbody);
+          sort_order = $('#name_order').val()
+          if(sort_order=='asc'){
+            document.getElementById('name_order').value = 'desc'
+          }
+          if (sort_order=='desc'){
+            document.getElementById('name_order').value="asc";
+          }
+        }
+        function sort_age() {
+          var table=$('#mytable');
+          var tbody =$('#table1');
 
-//           tbody.find('tr').sort(function(a, b) 
-//           {
-//           if($('#age_order').val()=='asc') 
-//           {
-//             return $('td:last', a).text().localeCompare($('td:last', b).text());
-//           }
-//           else 
-//           {
-//             return $('td:last', b).text().localeCompare($('td:last', a).text());
-//           }
+          tbody.find('tr').sort(function(a, b) 
+          {
+          if($('#age_order').val()=='asc') 
+          {
+            return $('td:last', a).text().localeCompare($('td:last', b).text());
+          }
+          else 
+          {
+            return $('td:last', b).text().localeCompare($('td:last', a).text());
+          }
             
-//           }).appendTo(tbody);
+          }).appendTo(tbody);
 
-//           var sort_order=$('#age_order').val();
-//           if(sort_order=="asc")
-//           {
-//           document.getElementById("age_order").value="desc";
-//           }
-//           if(sort_order=="desc")
-//           {
-//           document.getElementById("age_order").value="asc";
-//         }
-// }
+          var sort_order=$('#age_order').val();
+          if(sort_order=="asc")
+          {
+          document.getElementById("age_order").value="desc";
+          }
+          if(sort_order=="desc")
+          {
+          document.getElementById("age_order").value="asc";
+        }
+}
 
 $(document).ready(function(){
     $.getJSON('data.json',(data)=>{

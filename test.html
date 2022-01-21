@@ -28,7 +28,7 @@
 			<th class="header__item"><a id="Categorie" class="filter__link filter__link--number" href="#">Categorie</a></th>
 			<th class="header__item"><a id="Stock_status" class="filter__link filter__link--number" href="#">Stock Status</a></th>
 			<th class="header__item"><a id="Supplier" class="filter__link filter__link--number" href="#">Supplier</a></th>
-			<th class="header__item"><a id="Supply_Date" class="filter__link filter__link--number" href="#">Supply Date</a></th>
+			<th class="header__item"><a id="supply" class="filter__link filter__link--number" href="#">Supply Date</a></th>
 		</thead>
 		<tbody class="table-content">	
 			<tr class="table-row">		
@@ -40,7 +40,7 @@
 				<td class="table-data">10</td>
 				<td class="table-data">2</td>
 				<td class="table-data">2</td>
-				<td class="table-data">2013/12/01</td>
+				<td class="table-data">2013</td>
 			</tr>
 			<tr class="table-row">
 				<td class="table-data">Dick</td>
@@ -51,7 +51,7 @@
 				<td class="table-data">2</td>
 				<td class="table-data">2</td>
 				<td class="table-data">2</td>
-				<td class="table-data">2015/10/01</td>
+				<td class="table-data">2015</td>
 			</tr>
 			<tr class="table-row">
 				<td class="table-data">Harry</td>
@@ -62,7 +62,7 @@
 				<td class="table-data">2</td>
 				<td class="table-data">2</td>
 				<td class="table-data">2</td>
-				<td class="table-data">2012/11/01</td>
+				<td class="table-data">2012</td>
 			</tr>
 		</tbody>	
 	</table>
@@ -81,7 +81,7 @@ var properties = [
 	'Categorie',
 	'Stock_status',
 	'Supplier',
-	'Supply_Date'
+	'supply'
 ];
 
 $.each( properties, function( i, val ) {
@@ -111,7 +111,7 @@ $.each( properties, function( i, val ) {
 		rows.sort(function(a, b){
 
 			var x = $(a).find('.table-data').eq(index).text();
-    			var y = $(b).find('.table-data').eq(index).text();
+			var y = $(b).find('.table-data').eq(index).text();
 				
 			if(isNumber == true) {
     					
